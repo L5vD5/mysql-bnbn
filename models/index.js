@@ -15,12 +15,16 @@ const sequelize = new Sequelize(
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
-//User
+//DB 정의
 db.User = require("./User")(sequelize, Sequelize);
-//Product
 db.Product = require("./Product")(sequelize, Sequelize);
-
-//Company
 db.Company = require("./Company")(sequelize, Sequelize);
+db.Category = require("./Category")(sequelize,Sequelize);
+db.Cart = require("./Cart")(sequelize,Sequelize);
 
+//Join
+db.Product.belongsTo(db.Company);
+db.Product.belongsTo(db.Category);
+db.Cart.belongsTo(db.User);
+db.Cart.belongsTo(db.Product);
 module.exports = db;
