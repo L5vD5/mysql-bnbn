@@ -1,0 +1,9 @@
+type Query{
+    readAllCart:[Cart!]!
+}
+
+type Query{
+    readSelectCart(id:Int!):Cart!
+    User:User!
+    Product:Product!
+}

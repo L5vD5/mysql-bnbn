@@ -3,5 +3,10 @@ type Query {
 }
 
 type Query {
-  selectProduct(id: Int, productname: String!): Product!
+  selectProduct(
+  id: Int
+  productname: String!
+  ):Product!
+  Company:Company!
+  Category:Category!
 }

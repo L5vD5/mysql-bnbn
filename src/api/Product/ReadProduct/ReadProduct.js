@@ -1,4 +1,4 @@
-import { Product } from "../../../../models"
+import { Product, Company , Category } from "../../../../models"
 
 export default {
     Query:{
@@ -11,9 +11,10 @@ export default {
         },
         selectProduct: async(_,args) => {
             const {id,productname} = args
-            console.log(args)
+           // console.log(await Product.findOne({include:Company,where:{productname}}))
             try{
-                return await Product.findOne({where:{productname,id}})
+             const join = await Product.findOne({include:[{model:Company},{model:Category}],where:{productname}})
+                return join
             }catch(e){
                 return console.log(e)
             }
