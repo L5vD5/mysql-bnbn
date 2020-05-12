@@ -1,0 +1,7 @@
+type Query{
+    readAllUser:[User!]!
+}
+
+type Query{
+    readSelectUser(email:String!):User!
+}

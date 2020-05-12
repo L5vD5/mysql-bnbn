@@ -1,0 +1,7 @@
+type Query {
+  readProduct: [Product!]!
+}
+
+type Query {
+  selectProduct(id: Int, productname: String!): Product!
+}
