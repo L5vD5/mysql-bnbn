@@ -6,7 +6,7 @@ import schema from "./schema";
 import logger from "morgan";
 import express from "express"
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const path = require('path');
 
 const sequelize = require('./../models/index').sequelize
