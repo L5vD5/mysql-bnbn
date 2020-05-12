@@ -4,26 +4,42 @@ type User {
   email: String!
   password: String!
   address: String!
-  createdAt:String
+  createdAt: String
 }
 
 type Product {
-  id:ID!
-  category:Int!
-  productCompany_id:ID!
+  id: ID!
+  categoryId: ID!
+  companyId: ID!
   productname: String!
-  price:Int!
-  content:String!
-  status:Int!
-  createdAt:String
-  image_1:String
-  iamge_2:String
-  image_3:String
-  image_4:String
-  image_5:String
+  price: Int!
+  content: String!
+  status: Int!
+  createdAt: String
+  image_1: String
+  iamge_2: String
+  image_3: String
+  image_4: String
+  image_5: String
+  Company: Company!
+  Category:Category!
 }
 
 type Company {
+  id: ID!
+  companyname: String!
+  product: Product!
+}
+
+type Category {
+  id: ID!
+  categoryname: String!
+  product: Product!
+}
+
+type Cart{
   id:ID!
-  companyname:String!
-  }
+  User:User!
+  Product:Product!
+  quantity:Int!
+}
