@@ -1,3 +1,4 @@
+import {Company} from "./Company"
 module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define(
     "Product",
@@ -7,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      productCompany_id: {
+      CompanyId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      CategoryId: {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
@@ -57,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );  
+
   return Product
   };
   
