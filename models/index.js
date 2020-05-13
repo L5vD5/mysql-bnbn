@@ -21,10 +21,13 @@ db.Product = require("./Product")(sequelize, Sequelize);
 db.Company = require("./Company")(sequelize, Sequelize);
 db.Category = require("./Category")(sequelize,Sequelize);
 db.Cart = require("./Cart")(sequelize,Sequelize);
+db.FamilyCategory = require("./FamilyCategory")(sequelize,Sequelize);
+db.ProductFamily = require("./ProductFamily")(sequelize,Sequelize);
+db.ProductFamilyUser = require("./ProductFamilyUser")(sequelize,Sequelize);
 
 //Join
-db.Product.belongsTo(db.Company);
-db.Product.belongsTo(db.Category);
-db.Cart.belongsTo(db.User);
-db.Cart.belongsTo(db.Product);
+db.ProductFamilyUser.belongsTo(db.User);
+db.ProductFamilyUser.belongsTo(db.ProductFamily,{foreignKey:'ProductFamilyId'});
+
+db.ProductFamily.belongsTo(db.FamilyCategory);
 module.exports = db;

@@ -1,0 +1,7 @@
+type Query{
+    readAllPFU:[ProductFamilyUser!]!
+}
+
+type Query{
+    readSelectPFU(id:Int!):ProductFamilyUser!
+}

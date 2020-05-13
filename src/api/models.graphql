@@ -43,3 +43,23 @@ type Cart{
   Product:Product!
   quantity:Int!
 }
+
+type FamilyCategory{
+  id:ID!
+  name:String!
+}
+
+type ProductFamily{
+  id:ID!
+  name:String
+  FamilyCategory:FamilyCategory!
+}
+
+type ProductFamilyUser{
+  id:ID!
+  ProductFamily:ProductFamily!
+  User:User!
+}
+
+
+

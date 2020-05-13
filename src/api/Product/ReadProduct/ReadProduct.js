@@ -4,7 +4,7 @@ export default {
     Query:{
         readProduct: async() => {
             try{
-                return await Product.findAll()
+                return await Product.findAll({include:[{model:Company},{model:Category}]})
             }catch(e){
                 return console.log(e)
             }

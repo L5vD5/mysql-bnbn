@@ -1,0 +1,7 @@
+type Query{
+    readALLPF:[ProductFamily!]!
+}
+
+type Query{
+    readSelectPF(id:Int!):ProductFamily!
+}
