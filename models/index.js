@@ -26,8 +26,10 @@ db.ProductFamily = require("./ProductFamily")(sequelize,Sequelize);
 db.ProductFamilyUser = require("./ProductFamilyUser")(sequelize,Sequelize);
 
 //Join
+    
 db.ProductFamilyUser.belongsTo(db.User);
 db.ProductFamilyUser.belongsTo(db.ProductFamily,{foreignKey:'ProductFamilyId'});
+db.Product.belongsTo(db.FamilyCategory);
 
 db.ProductFamily.belongsTo(db.FamilyCategory);
 module.exports = db;

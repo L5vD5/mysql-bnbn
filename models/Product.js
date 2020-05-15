@@ -8,11 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      CompanyId: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-      },
-      CategoryId: {
+      familyCategoryId: {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
@@ -29,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       status: {
-        type: DataTypes.STRING(15),
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        allowNull: true,
       },
       createdAt: {
         type: DataTypes.DATE,

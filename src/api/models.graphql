@@ -9,8 +9,7 @@ type User {
 
 type Product {
   id: ID!
-  categoryId: ID!
-  companyId: ID!
+  FamilyCategory: FamilyCategory!
   productname: String!
   price: Int!
   content: String!
@@ -21,8 +20,6 @@ type Product {
   image_3: String
   image_4: String
   image_5: String
-  Company: Company!
-  Category:Category!
 }
 
 type Company {
