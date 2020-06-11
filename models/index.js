@@ -18,8 +18,6 @@ db.Sequelize = Sequelize
 //DB 정의
 db.User = require("./User")(sequelize, Sequelize);
 db.Product = require("./Product")(sequelize, Sequelize);
-db.Company = require("./Company")(sequelize, Sequelize);
-db.Category = require("./Category")(sequelize,Sequelize);
 db.Cart = require("./Cart")(sequelize,Sequelize);
 db.FamilyCategory = require("./FamilyCategory")(sequelize,Sequelize);
 db.ProductFamily = require("./ProductFamily")(sequelize,Sequelize);

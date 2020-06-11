@@ -1,11 +1,12 @@
 type Query {
   readProduct: [Product!]!
-  Company: Company!
-  Category: Category!
+  FamilyCategory:[FamilyCategory!]!
 }
 
 type Query {
   selectProduct(id: Int, productname: String!): Product!
-  Company: Company!
-  Category: Category!
+}
+
+type Query {
+  searchProduct(productname: String!): Product!
 }

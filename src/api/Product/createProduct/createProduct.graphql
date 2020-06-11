@@ -1,8 +1,8 @@
 type Mutation{
     createProduct(
-        category:Int
         productCompany_id:Int
         productname:String
+        FamilyCategoryId:Int
         price:Int
         content:String
         status:Int

@@ -1,12 +1,10 @@
 const { Product } = require("../../../../models");
-const  {Company}  = require("../../../../models");
 
 export default {
   Mutation: {
     createProduct: async (_, args) => {
       const {
-        category,
-        productCompany_id,
+        FamilyCategoryId,
         productname,
         price,
         content,
@@ -17,10 +15,9 @@ export default {
         image_4,
         image_5,
       } = args;
-  
+  console.log(args);
      await  Product.create({
-        category,
-        productCompany_id,
+      FamilyCategoryId,
         productname,
         price,
         content,
