@@ -9,7 +9,7 @@ import express from "express"
 const PORT = process.env.PORT || 4000;
 const path = require('path');
 
-const sequelize = require('./../models/index').sequelize
+const sequelize = require('../model/index').sequelize
 sequelize.sync()
 
 var mysql      = require('mysql');

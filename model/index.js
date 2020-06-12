@@ -16,7 +16,7 @@ db.sequelize = sequelize
 db.Sequelize = Sequelize
 
 //DB 정의
-db.User = require("./users")(sequelize, Sequelize);
+db.users = require("./users")(sequelize, Sequelize);
 
 //Join
     

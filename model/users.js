@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  const User = sequelize.define('users', {
+  const users = sequelize.define('users', {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -52,5 +52,5 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'users'
   });
-  return User 
+  return users 
 };
