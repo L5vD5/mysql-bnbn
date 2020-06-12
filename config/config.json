@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "bjwkor",
-    "database": "mysql_bnbn",
-    "host": "127.0.0.1",
+    "username": "l5vd5",
+    "password": "dbsqud23",
+    "database": "en",
+    "host": "211.62.225.216",
     "dialect": "mysql",
     "operatorsAliases": false
   },

@@ -8,14 +8,6 @@ export default {
             }catch(e){
                 return console.log(e)
             }
-        },
-        readSelectUser:async(_,args) => {
-            const {email} = args
-            try{
-                return await User.findOne({where:{email}})
-            }catch(e){
-                return console.log(e)
-            }   
         }
     }
 }
