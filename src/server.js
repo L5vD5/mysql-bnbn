@@ -14,11 +14,11 @@ sequelize.sync()
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'bjwkor',
+  host     : '211.62.225.216',
+  user     : 'l5vd5',
+  password : 'dbsqud23',
   port     : 3306 ,
-  database : 'bnbn'
+  database : 'en'
 });
 
 connection.connect();
