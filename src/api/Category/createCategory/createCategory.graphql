@@ -1,5 +1,0 @@
-type Mutation{
-    createCategory(
-        categoryname:String!
-    ):Boolean!
-}

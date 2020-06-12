@@ -1,7 +1,0 @@
-type Query {
-    readAllCompany:[Company!]!
-}
-
-type Query{
-    readSelectCompany(companyname:String!):Company!
-}
