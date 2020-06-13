@@ -50,6 +50,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: 'order'
     }
   }, {
+    timestamps: false,
     tableName: 'stock'
   });
 };

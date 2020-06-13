@@ -1,0 +1,5 @@
+type Query {
+  getAllFamily(
+    category:Int!
+  ): [ProductFamily!]!
+}

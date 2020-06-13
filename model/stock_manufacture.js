@@ -29,6 +29,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: 'produce'
     }
   }, {
+    timestamps: false,
     tableName: 'stock_manufacture'
   });
 };

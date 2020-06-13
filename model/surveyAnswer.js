@@ -31,6 +31,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: '0'
     }
   }, {
+    timestamps: false,
     tableName: 'surveyAnswer'
   });
 };

@@ -43,13 +43,14 @@ module.exports = function(sequelize, DataTypes) {
     created_date: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: DataTypes.NOW
     },
     salt: {
       type: DataTypes.STRING(100),
       allowNull: false
     }
   }, {
+    timestamps: false,
     tableName: 'users'
   });
   return users 

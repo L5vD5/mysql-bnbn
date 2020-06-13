@@ -4,4 +4,44 @@ type User {
   password: String!
 }
 
+type Product {
+  id: ID!
+  name: String!
+  grade: String
+  barcode: String
+  family: Int
+  price_receiving: String!
+  price_shipping: String
+  weight: String
+  safety_stock: Int
+  file_name: String
+  detail_file: String
+  p_set: Int
+  user_id: Int
+  date: String
+  mallVisible: Boolean
+  state: Int
+}
 
+type ProductFamily {
+  id: ID!
+  name: String!
+  category: [FamilyCategory!]!
+}
+
+type ProductFamily_user{
+  id : ID!
+  family_id :Int
+  user_id : Int
+}
+
+type FamilyCategory {
+  id :ID!
+  name :String
+}
+
+type Test {
+  id:ID!
+  pfu_id : Int!
+  category_name : String!
+  }

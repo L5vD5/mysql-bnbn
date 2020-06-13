@@ -17,7 +17,15 @@ db.Sequelize = Sequelize
 
 //DB 정의
 db.users = require("./users")(sequelize, Sequelize);
-
+db.product = require("./product")(sequelize, Sequelize);
+db.productFamily= require("./productFamily")(sequelize, Sequelize);
+db.productFamily_user= require("./productFamily_user")(sequelize, Sequelize);
+db.familyCategory = require("./familyCategory")(sequelize, Sequelize);
 //Join
-    
+db.productFamily.belongsTo(db.familyCategory,{foreignKey:"category"});
+db.productFamily.hasMany(db.productFamily_user,{foreignKey:"family_id"});
+db.familyCategory.hasMany(db.productFamily,{foreignKey:"category"})
+db.productFamily_user.belongsTo(db.productFamily,{foreignKey:"family_id"});
+db.productFamily_user.belongsTo(db.users,{foreignKey:"user_id"});
+
 module.exports = db;

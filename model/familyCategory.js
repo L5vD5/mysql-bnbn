@@ -1,18 +1,24 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('familyCategory', {
-    id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-      primaryKey: true
+  const familyCategory = sequelize.define(
+    "familyCategory",
+    {
+      id: {
+        type: DataTypes.INTEGER(11),
+        allowNull: false,
+        primaryKey: true,
+      },
+      name: {
+        type: DataTypes.STRING(50),
+        allowNull: false,
+        defaultValue: "0",
+      },
     },
-    name: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      defaultValue: '0'
+    {
+      timestamps: false,
+      tableName: "familyCategory",
     }
-  }, {
-    tableName: 'familyCategory'
-  });
+  );
+  return familyCategory;
 };
