@@ -24,8 +24,6 @@ db.familyCategory = require("./familyCategory")(sequelize, Sequelize);
 //Join
 db.productFamily.belongsTo(db.familyCategory,{foreignKey:"category"});
 db.productFamily.hasMany(db.productFamily_user,{foreignKey:"family_id"});
-db.familyCategory.hasMany(db.productFamily,{foreignKey:"category"})
-db.productFamily_user.belongsTo(db.productFamily,{foreignKey:"family_id"});
-db.productFamily_user.belongsTo(db.users,{foreignKey:"user_id"});
+
 
 module.exports = db;

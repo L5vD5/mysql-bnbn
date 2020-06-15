@@ -1,3 +1,5 @@
 type Query{
-    getUserFamilyCategory:[ProductFamily!]!
+    getUserFamilyCategory(
+        user_id:Int!
+    ):[ProductFamily!]!
 }

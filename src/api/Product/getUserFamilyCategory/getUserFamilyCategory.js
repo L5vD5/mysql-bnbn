@@ -9,10 +9,14 @@ const Op = Sequelize.Op;
 export default {
   Query: {
     getUserFamilyCategory: async (_, args) => {
-      const { id } = args;
-        
-
-      return familyCategory.findAll({ include: [{ model: productFamily }] });
+      const { user_id } = args;
+      return await productFamily.findAll({
+        include: [
+          { model: familyCategory},
+          { model: productFamily_user, where: { user_id } },
+        ],
+        group:"id"
+      });
     },
   },
 };
